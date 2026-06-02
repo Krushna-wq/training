@@ -145,3 +145,131 @@ def user():
 
 
 print(user("123456"))
+
+def test():
+    yield 1
+    yield 2
+
+gen = test()
+
+# print(next(gen))
+# print(next(gen))
+
+def count():
+    print("Start")
+    yield 1
+
+    print("Middle")
+    yield 2
+
+    print("End")
+    yield 3
+
+gen = count()
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+
+def even_num(a):
+    for i in range(a+1):
+        if i % 2 == 0:
+            yield i
+
+g = even_num(5)
+# print(next(g))
+# print(next(g))
+# print(next(g))
+
+
+def primeNums(a):
+    for num in range(2, a + 1):
+        is_prime = True
+        for i in range(2, num):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            yield num
+
+
+gen = primeNums(20)
+
+print(next(gen)) 
+print(next(gen))  
+print(next(gen))  
+print(next(gen))  
+print(next(gen))  
+
+
+# balance = 5000
+
+# try:
+#     amount = int(input("Enter withdrawal amount: "))
+
+#     if amount > balance:
+#         raise Exception("Insufficient Balance")
+
+#     balance -= amount
+
+# except ValueError:
+#     print("Please enter a valid number")
+
+# except Exception as e:
+#     print(e)
+
+# else:
+#     print("Withdrawal Successful")
+#     print("Remaining Balance:", balance)
+
+# finally:
+#     print("Thank you for using the ATM")
+
+arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+def findTotal():
+    total = 0
+    for row in arr:
+     for num in row:
+        total += num
+    return total
+
+print(findTotal())
+
+# import re
+
+# password = input("Enter password: ")
+
+# pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+
+# if re.match(pattern, password):
+#     print("Strong Password")
+# else:
+#     print("Weak Password")
+
+
+
+file = open("data.txt", "w")
+
+file.write("Hello Krushna")
+
+file.close()
+
+file = open("data.txt", "r")
+
+content = file.read()
+
+print(content)
+
+file.close()
+
+file = open("data.txt", "a")
+
+file.write("\nWelcome to Python")
+
+file.close() 
