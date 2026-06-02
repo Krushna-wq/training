@@ -1,0 +1,57 @@
+Interview Questions of python
+
+1. what are the application of python?
+
+Data Types:
+
+1. list
+    1. list is denoted by [], 
+    2. list is mutable, 
+    3. mutable means we can change the value. 
+    4. list can store different types of data types
+    5. list is order.
+    6. list allow duplicate value
+    7. diff betw insert and append
+    8. diff betw remove and pop
+    9. pop() = removes and returns an item from a list based on its position index (randomly remove)
+
+2. tuple
+  1. denoted by ()
+  2. tuple is imutable
+  3. tuple is ordered 
+  4. tuple can contain duplicate values
+  5. tuple is heterogeneous - can store multiple data types
+
+3. set
+  1. denoted by {}
+  2. only stores the unique element
+  3. mutable
+  4. empty set = set()
+  5. it can store diff data types
+  6. set is unorder.
+  7. does not support indexing and slicing
+  8. union - combines the unique value and returns only unique  (avoid repeatation)
+  9. intersection -  returns only unique
+ 10. discard
+
+
+4. dictionary
+  1. it is a collection key and value pair (key should be unique)
+  2. denoted by {}
+  3. dictionary is mutable.
+  4. dictionary is order
+  5. items can added and remove at any time.
+  6. indexed by  key value are accessed using key.
+  7. can store diff data types.
+
+5. string 
+ 1. string is imutable
+ 
+ 
+
+fucntion -
+local - variable is defined inside the function and only accessable inside that function.
+globle - variable is defined outside the function and can use everywhere.
+lambda - A lambda function in Python is a small, anonymous function that can take any number of arguments but can only have one single expression
+why lambda - for short and simple logic
+pass - 

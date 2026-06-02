@@ -1,0 +1,2 @@
+str = "ABC"
+print(str);
