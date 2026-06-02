@@ -102,3 +102,46 @@ def add(a, b):
 
 print(add(10, 20))
 
+def uppercase_decorator(func):
+    def wrapper():
+        result = func()
+        return result.upper()
+    return wrapper
+
+
+@uppercase_decorator
+def greet():
+    return "hello team"
+
+
+print(greet())
+
+def auth(func):
+    def wrapper(username, password):
+        if username == "admin@123" and password == "password":
+            return func()
+        else:
+            return "Auth Failed"
+    return wrapper
+    
+
+@auth
+def use():
+    return "Welcome"
+print(use("krushna", "12344"))
+
+def otp_auth(func):
+    def wrapper(otp):
+        if otp == "123456":
+            return func()
+        else:
+            return "Invalid OTP"
+    return wrapper
+
+
+@otp_auth
+def user():
+    return "Welcome"
+
+
+print(user("123456"))
