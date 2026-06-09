@@ -1,0 +1,50 @@
+public class ContainerWithMostWater {
+    public static int maxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int maxWater = 0;
+
+        while (left < right) {
+            int width = right - left;
+            int currentWater = Math.min(height[left], height[right]) * width;
+            if (currentWater > maxWater) {
+                maxWater = currentWater;
+            }
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxWater;
+    }
+
+    public static String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
+            for (int j = 1; j < strs.length; j++) {
+                if (i >= strs[j].length() || strs[j].charAt(i) != c) {
+                    return strs[0].substring(0, i);
+                }
+            }
+        }
+        
+        return strs[0];
+    }
+
+    public static void main(String[] args) {
+        int[] heights = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        System.out.println(maxArea(heights));
+        
+        String[] words = {"flower", "flow", "flight"};
+        System.out.println(longestCommonPrefix(words));
+    }
+}
+
+
+
